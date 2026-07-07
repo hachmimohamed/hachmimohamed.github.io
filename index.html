@@ -201,7 +201,8 @@
 
     <script>
         function selectAge(age) {
-            alert("Vous avez sélectionné la tranche d'âge : " + age + " ans.\n\nLa page de sélection des jeux arrive bientôt !");
+    window.location.href = "catalogue.html?age=" + age;
+};
             // Ici, vous pourrez rediriger vers catalogue.html?age=3-6 par exemple
         }
     </script>
