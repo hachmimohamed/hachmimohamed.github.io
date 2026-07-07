@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade Family - L'arcade sécurisée pour vos enfants</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%234A90D9'/><text x='16' y='22' text-anchor='middle' font-size='18' font-weight='bold' fill='white' font-family='Arial'>AF</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800&family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #FFF8F0;
+            color: #2D3436;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            color: #4A90D9;
+        }
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #4A90D9, #FFD93D);
+            color: white;
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+        .hero h1 {
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .btn {
+            background-color: #FF7B42;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .btn:hover {
+            background-color: #E56A35;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background-color: white;
+            color: #4A90D9;
+            border: 2px solid #4A90D9;
+        }
+        .btn-secondary:hover {
+            background-color: #4A90D9;
+            color: white;
+        }
+        .age-selector {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        .age-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 150px;
+            border: 3px solid transparent;
+        }
+        .age-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            border-color: #FF7B42;
+        }
+        .age-emoji {
+            font-size: 3em;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .step {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+        }
+        .step:hover {
+            transform: translateY(-3px);
+        }
+        .step-number {
+            font-size: 2em;
+            color: #FF7B42;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .faq-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .faq-question {
+            font-weight: 800;
+            color: #4A90D9;
+            margin-bottom: 5px;
+        }
+        .faq-answer {
+            color: #555;
+            font-size: 0.95em;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+            border-top: 1px solid #DDD;
+            color: #888;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #4A90D9;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.8em;
+            }
+            .age-selector {
+                flex-direction: column;
+                align-items: center;
+            }
+            .age-card {
+                width: 80%;
+            }
+            .steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>🏠 Arcade Family</h1>
+            <p>L'arcade de vos enfants, sans danger et sans prise de tête.</p>
+            <a href="catalogue.html" class="btn">🎮 Je choisis l'âge</a>
+            <a href="#how" class="btn btn-secondary">📖 Comment ça marche ?</a>
+        </div>
+
+        <!-- How it works -->
+        <h2 id="how">👨‍👩‍👧‍👦 Comment ça marche ?</h2>
+        <div class="steps">
+            <div class="step">
+                <span class="step-number">1️⃣</span>
+                <p>Choisissez l'âge de vos enfants</p>
+            </div>
+            <div class="step">
+                <span class="step-number">2️⃣</span>
+                <p>Sélectionnez les jeux adaptés</p>
+            </div>
+            <div class="step">
+                <span class="step-number">3️⃣</span>
+                <p>Téléchargez le pack sur une clé USB</p>
+            </div>
+            <div class="step">
+                <span class="step-number">4️⃣</span>
+                <p>Branchez sur votre TV Android</p>
+            </div>
+            <div class="step">
+                <span class="step-number">5️⃣</span>
+                <p>Vos enfants jouent en sécurité</p>
+            </div>
+        </div>
+
+        <!-- Age Selector -->
+        <h2>🧒 Quel âge ont vos enfants ?</h2>
+        <div class="age-selector">
+            <div class="age-card" onclick="window.location.href='catalogue.html?age=3-6'">
+                <span class="age-emoji">🧸</span>
+                <h3>3-6 ans</h3>
+                <p>Découverte</p>
+            </div>
+            <div class="age-card" onclick="window.location.href='catalogue.html?age=7-10'">
+                <span class="age-emoji">🎮</span>
+                <h3>7-10 ans</h3>
+                <p>Aventure</p>
+            </div>
+            <div class="age-card" onclick="window.location.href='catalogue.html?age=11+'">
+                <span class="age-emoji">🐉</span>
+                <h3>11+ ans</h3>
+                <p>Défi</p>
+            </div>
+        </div>
+
+        <!-- Why Arcade Family -->
+        <h2>⭐ Pourquoi Arcade Family ?</h2>
+        <ul style="list-style: none; padding: 0; font-size: 1.05em;">
+            <li style="margin-bottom: 12px;">✅ Interface ultra-simple pour les enfants</li>
+            <li style="margin-bottom: 12px;">✅ Jeux triés par âge (3-6, 7-10, 11+)</li>
+            <li style="margin-bottom: 12px;">✅ Zéro risque : pas de boutique, pas de pub, pas de menu caché</li>
+            <li style="margin-bottom: 12px;">✅ Installation guidée pas à pas</li>
+            <li style="margin-bottom: 12px;">✅ Fonctionne sur toutes les TV Android</li>
+            <li style="margin-bottom: 12px;">✅ Gratuit pour toujours</li>
+        </ul>
+
+        <!-- FAQ rapide -->
+        <h2>❓ Questions fréquentes</h2>
+        <div class="faq-item">
+            <p class="faq-question">Est-ce que c'est légal ?</p>
+            <p class="faq-answer">Oui, nous utilisons des jeux libres de droits et des homebrews créés par la communauté.</p>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question">Quelle TV faut-il ?</p>
+            <p class="faq-answer">Toute TV Android récente, ou un boîtier Android TV (Nvidia Shield, Xiaomi Mi Box, Chromecast...).</p>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question">Et si je veux ajouter un jeu plus tard ?</p>
+            <p class="faq-answer">Une simple clé USB suffit ! On vous explique tout dans le guide.</p>
+        </div>
+        <p style="text-align:center; margin-top:20px;">
+            <a href="faq.html" style="color:#4A90D9; font-weight:800; text-decoration:none; font-size:1.1em;">→ Voir toutes les questions (FAQ complète)</a>
+        </p>
+
+        <!-- Appel à l'action -->
+        <div style="text-align:center; margin:40px 0;">
+            <a href="catalogue.html" class="btn" style="font-size:1.3em; padding:20px 40px;">🚀 Je commence maintenant !</a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            <a href="index.html">Accueil</a> &nbsp;|&nbsp;
+            <a href="catalogue.html">Catalogue</a> &nbsp;|&nbsp;
+            <a href="telechargement.html">Téléchargement</a> &nbsp;|&nbsp;
+            <a href="faq.html">FAQ</a> &nbsp;|&nbsp;
+            <a href="partenaires.html">Partenaires</a> &nbsp;|&nbsp;
+            <a href="mentions-legales.html">Mentions légales</a>
+        </p>
+        <p>© 2026 Arcade Family - L'arcade sécurisée pour vos enfants 🏠🎮</p>
+    </footer>
+
+</body>
+</html>
