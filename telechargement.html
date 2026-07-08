@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade Family - Téléchargement</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%234A90D9'/><text x='16' y='22' text-anchor='middle' font-size='18' font-weight='bold' fill='white' font-family='Arial'>AF</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800&family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: 'Open Sans', sans-serif; background-color: #FFF8F0; color: #2D3436; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1, h2, h3 { font-family: 'Nunito', sans-serif; font-weight: 800; color: #4A90D9; }
+        .header { text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #4A90D9, #FF7B42); color: white; border-radius: 20px; margin-bottom: 30px; }
+        .header h1 { color: white; font-size: 2em; }
+        .header .emoji { font-size: 5em; display: block; margin-bottom: 10px; }
+        .section { background-color: white; border-radius: 15px; padding: 25px; margin-bottom: 20px; box-shadow: 0 3px 10px rgba(0,0,0,0.08); }
+        .section h2 { margin-top: 0; text-align: center; }
+        .game-row { display: flex; align-items: center; justify-content: space-between; padding: 15px; border-bottom: 1px solid #EEE; flex-wrap: wrap; gap: 10px; }
+        .game-row:last-child { border-bottom: none; }
+        .game-name { font-weight: 800; font-size: 1.1em; }
+        .game-emoji { font-size: 2em; margin-right: 10px; }
+        .btn { background-color: #FF7B42; color: white; padding: 10px 20px; border: none; border-radius: 50px; font-size: 0.9em; font-family: 'Nunito', sans-serif; font-weight: 800; cursor: pointer; text-decoration: none; display: inline-block; transition: background-color 0.3s; }
+        .btn:hover { background-color: #E56A35; }
+        .btn-blue { background-color: #4A90D9; }
+        .btn-blue:hover { background-color: #357ABD; }
+        .step-box { background-color: white; padding: 20px; border-radius: 15px; margin-bottom: 15px; box-shadow: 0 3px 10px rgba(0,0,0,0.08); text-align: center; }
+        .step-num { background-color: #4A90D9; color: white; width: 40px; height: 40px; border-radius: 50%; display: inline-block; line-height: 40px; font-size: 1.3em; font-weight: 800; margin-bottom: 10px; }
+        .highlight { background: #FFF3CD; padding: 2px 8px; border-radius: 5px; font-weight: 800; }
+        .section-3-6 { border-left: 5px solid #FF7B42; }
+        .section-7-10 { border-left: 5px solid #4A90D9; }
+        .section-11 { border-left: 5px solid #E74C3C; }
+        .section-emulator { border-left: 5px solid #27AE60; }
+        footer { text-align: center; padding: 30px; margin-top: 40px; border-top: 1px solid #DDD; color: #888; font-size: 0.9em; }
+        footer a { color: #4A90D9; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        @media (max-width: 600px) { .game-row { flex-direction: column; text-align: center; } .btn { width: 100%; } }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <span class="emoji">📱</span>
+            <h1>Installez Arcade Family</h1>
+            <p>Téléchargez l'émulateur et les jeux</p>
+        </div>
+
+        <!-- Émulateur -->
+        <div class="section section-emulator">
+            <h2>🕹️ Étape 1 : L'émulateur</h2>
+            <p style="text-align:center; margin-bottom:15px;">Téléchargez et installez MAME4droid.</p>
+            <div style="text-align:center;">
+                <a href="https://www.mediafire.com/file/bp7nlsk0nmc7x9s/MAME4droid_1.16.9_apkcombo.com.apk/file" class="btn btn-blue" target="_blank">📥 Télécharger l'émulateur</a>
+            </div>
+        </div>
+
+        <!-- 3-6 ans -->
+        <div class="section section-3-6">
+            <h2>🧸 Jeux 3-6 ans (3 jeux)</h2>
+            <div class="game-row">
+                <span><span class="game-emoji">🟡</span><span class="game-name">Pac-Man</span></span>
+                <a href="https://www.mediafire.com/file/tgt9wxfpd1on5sp/pacman.zip/file" class="btn" target="_blank">📥 Télécharger</a>
+            </div>
+            <div class="game-row">
+                <span><span class="game-emoji">🫧</span><span class="game-name">Bubble Bobble 2</span></span>
+                <a href="https://www.mediafire.com/file/h5x3lrm5ggnkakp/bublbob2.zip/file" class="btn" target="_blank">📥 Télécharger</a>
+            </div>
+            <div class="game-row">
+                <span><span class="game-emoji">🎈</span><span class="game-name">Pang</span></span>
+                <a href="https://www.mediafire.com/file/o2o6jqunbl8sh80/pang.zip/file" class="btn" target="_blank">📥 Télécharger</a>
+            </div>
+        </div>
+
+        <!-- 7-10 ans -->
+        <div class="section section-7-10">
+            <h2>🎮 Jeux 7-10 ans (8 jeux)</h2>
+            <div class="game-row">
+                <span><span class="game-emoji">🦖</span><span class="game-name">Cadillacs & Dinosaurs</span></span>
+                <a href="https://www.mediafire.com/file/yu6y7lozghgafbg/dinoj.zip/file" class="btn" target="_blank">📥 Télécharger</a>
+            </div>
+            <div class="game-row">
+                <span><span class="game-emoji">🐢</span><span class="game-name">TMNT</span></span>
+                <a href="https://www.mediafire.com/file/ylijasv8vgh56nv/tmnt22pu.zip/file" class="btn" target="_blank">📥 Télécharger</a>
+            </div>
+            <div class="game-row">
+                <span><span class="game-emoji">💛</span><span class="game-name">The Simpsons</span></span>
+                <a href="https://www.mediafire.com/file/yxxlr7vzkxlz3jy/simpsons2p2.zip/file" class="btn" target="_blank">📥 Télécharger</a>
+            </div>
+            <div class="game-row">
+                <span><span class="game-emoji">👊</span><span class="game-name">Final Fight</span></span>
+                <a href="https://www.mediafire.com/file/0l3xkm8spje11qt/ffightjh.zip/file" class="btn" target="_blank">📥 Télécharger</a>
+            </div>
+            <div class="game-row">
+                <span><span class="game-emoji">🔫</span><span class="game-name">Metal Slug 2</span></span>
+                <a href="https://www.mediafire.com/file/isw197mcprs2v8h/mslug2.zip/file" class="btn" target="_blank">📥 Télécharger</a>
+            </div>
+            <div class="game-row">
+                <span><span class="game-emoji">⚔️</span><span class="game-name">Astérix</span></span>
+                <a href="https://www.mediafire.com/file/9a44577yyajxy9d/asterixeac.zip/file" class="btn" target="_blank">📥 Télécharger</a>
+            </div>
+            <div class="game-row">
+                <span><span class="game-emoji">🧢</span><span class="game-name">Capitaine Commando</span></span>
+                <a href="https://www.mediafire.com/file/piolesuujkxfy5z/captcommu.zip/file" class="btn" target="_blank">📥 Télécharger</a>
+            </div>
+            <div class="game-row">
+                <span><span class="game-emoji">🏃</span><span class="game-name">Wonder Boy</span></span>
+                <a href="https://www.mediafire.com/file/hd2jzo1ml3ki9d3/wboy.zip/file" class="btn" target="_blank">📥 Télécharger</a>
+            </div>
+        </div>
+
+        <!-- 11+ ans -->
+        <div class="section section-11">
+            <h2>🐉 Jeux 11+ ans (1 jeu)</h2>
+            <div class="game-row">
+                <span><span class="game-emoji">🥊</span><span class="game-name">Street Fighter Alpha 3</span></span>
+                <a href="https://www.mediafire.com/file/xz8q4khs7tbd20m/Street-Fighter-Alpha-3-Europe.zip/file" class="btn" target="_blank">📥 Télécharger</a>
+            </div>
+        </div>
+
+        <!-- Configuration -->
+        <div class="step-box">
+            <h3>⚙️ Configurez MAME4droid</h3>
+            <p>
+                <strong>①</strong> Ouvrez <strong>MAME4droid</strong><br>
+                <strong>②</strong> Allez dans <strong>Settings → General</strong><br>
+                <strong>③</strong> Cliquez sur <strong>"Change ROMs path"</strong><br>
+                <strong>④</strong> Sélectionnez : <span class="highlight">Download</span><br>
+                <strong>⑤</strong> Redémarrez l'application
+            </p>
+        </div>
+
+        <div class="step-box" style="border: 4px dashed #FF7B42;">
+            <h2>✅ C'est prêt !</h2>
+            <p>Les 12 jeux apparaissent dans MAME4droid.</p>
+            <p style="font-size: 3em;">🎮</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>
+            <a href="index.html">Accueil</a> &nbsp;|&nbsp;
+            <a href="catalogue.html">Catalogue</a> &nbsp;|&nbsp;
+            <a href="telechargement.html">Téléchargement</a> &nbsp;|&nbsp;
+            <a href="faq.html">FAQ</a> &nbsp;|&nbsp;
+            <a href="mentions-legales.html">Mentions légales</a>
+        </p>
+        <p>© 2026 Arcade Family - L'arcade sécurisée pour vos enfants 🏠🎮</p>
+    </footer>
+
+</body>
+</html>
